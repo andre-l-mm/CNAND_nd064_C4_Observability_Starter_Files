@@ -1,23 +1,56 @@
 **Note:** For the screenshots, you can store all of your answer images in the `answer-img` directory.
 
 ## Verify the monitoring installation
-
 *TODO:* run `kubectl` command to show the running pods and services for all components. Take a screenshot of the output and include it here to verify the installation
+
+**Answer:**
+![Running PODS](answer-img/01-pods.png)
 
 ## Setup the Jaeger and Prometheus source
 *TODO:* Expose Grafana to the internet and then setup Prometheus as a data source. Provide a screenshot of the home page after logging into Grafana.
 
+**Answer:**
+![Grafana Home Page](answer-img/02-grafana-homepage.png)
+
 ## Create a Basic Dashboard
 *TODO:* Create a dashboard in Grafana that shows Prometheus as a source. Take a screenshot and include it here.
+
+**Answer:**
+![Basic Grafana Dashboard](answer-img/03-basic-grafana-dashboard.png)
 
 ## Describe SLO/SLI
 *TODO:* Describe, in your own words, what the SLIs are, based on an SLO of *monthly uptime* and *request response time*.
 
+**Answer:**
+
+_The application uptime for last month achieved 99.99%_
+
+_The maximum API response time for the last month was 200ms_  
+
 ## Creating SLI metrics.
 *TODO:* It is important to know why we want to measure certain metrics for our customer. Describe in detail 5 metrics to measure these SLIs. 
 
+**Answer:**
+
+* Metrics for Request Response Time:
+
+_Average HTTP Response time grouped per time interval (e.g. per 30s)_
+
+_Maximum HTTP Response Time grouped per time interval (e.g. per 30s)_
+
+* Metrics for Uptime:
+
+_Number of success HTTP responses per second_
+
+_Number of error HTTP responses per second_
+
+_Number of error HTTP responses per second divided by the total number of HTTP calls per second_  
+
+
 ## Create a Dashboard to measure our SLIs
 *TODO:* Create a dashboard to measure the uptime of the frontend and backend services We will also want to measure to measure 40x and 50x errors. Create a dashboard that show these values over a 24 hour period and take a screenshot.
+
+![SLIs Grafana Dashboard](answer-img/04-SLI-grafana-dashboard.png)
 
 ## Tracing our Flask App
 *TODO:*  We will create a Jaeger span to measure the processes on the backend. Once you fill in the span, provide a screenshot of it here. Also provide a (screenshot) sample Python file containing a trace and span code used to perform Jaeger traces on the backend service.
