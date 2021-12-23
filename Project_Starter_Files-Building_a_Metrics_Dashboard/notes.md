@@ -52,6 +52,10 @@ Frontend code has been modified so that metrics are exported using prometheus_fl
 # Frontend
 cd reference-app/frontend
 docker build -f ./Dockerfile -t frontend .
+
+# Frontend
+cd reference-app/backend
+docker build -f ./Dockerfile -t backend .
 ```
 
 ### Push Docker Images
@@ -59,4 +63,7 @@ docker build -f ./Dockerfile -t frontend .
 ```
 docker tag frontend andremagalhaes/frontend
 docker push andremagalhaes/frontend
+
+docker tag backend andremagalhaes/backend
+docker push andremagalhaes/backend
 ```
