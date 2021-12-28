@@ -120,15 +120,21 @@ _Percentage of Errors compared to total number of requests (i.e. Failure Rate)_
 
 **Answer**
 
-_Failure Rate should be less than 0.05%_
+_KPI_1: Failure Rate should be less than 0.05%_
 
-_Container should be up and running at least 99.95% of the time for all applications (frontend and backend)_
+_KPI_2: Container should be up and running at least 99.95% of the time for all applications (frontend and backend)_
 
-_No 400x or 500x errors detected_
+_KPI_3: No 400x or 500x errors detected_
 
 ## Final Dashboard
-*TODO*: Create a Dashboard containing graphs that capture all the metrics of your KPIs and adequately representing your SLIs and SLOs. Include a screenshot of the dashboard here, and write a text description of what graphs are represented in the dashboard.  
+*TODO*: Create a Dashboard containing graphs that capture all the metrics of your KPIs and adequately representing your SLIs and SLOs. Include a screenshot of the dashboard here, and write a text description of what graphs are represented in the dashboard.
 
 ![Final Dashboard Part 1](answer-img/12_final_dashboard-part-1.png)
 
 ![Final Dashboard Part 2](answer-img/12_final_dashboard-part-2.png)
+
+Explanation of the charts:
+
+- Failure rate: Implements KPI_1. Displays current error rate as percentage based on the number of error response (400x and 500x) versus the total number of requests.
+- Uptime: Implements KPI_2. Computes uptime of each pod for each application
+- Errors per App: Implement KPI_3: Displays number of 400 and 500 errors for each app. 
