@@ -12,9 +12,9 @@ do
 
 
 	#simulate backend calls
-	#curl --silent --output /dev/null --show-error --fail http://localhost:8081
+	curl --silent --output /dev/null --show-error --fail http://localhost:8081
 
-	#curl --silent --output /dev/null --show-error --fail http://localhost:8081/api
+	curl --silent --output /dev/null --show-error --fail http://localhost:8081/api
 
 	sleep 1
 done

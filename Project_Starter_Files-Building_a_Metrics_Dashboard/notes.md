@@ -53,7 +53,7 @@ Frontend code has been modified so that metrics are exported using prometheus_fl
 cd reference-app/frontend
 docker build -f ./Dockerfile -t frontend .
 
-# Frontend
+# Backend
 cd reference-app/backend
 docker build -f ./Dockerfile -t backend .
 ```

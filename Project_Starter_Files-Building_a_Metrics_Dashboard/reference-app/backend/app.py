@@ -5,7 +5,7 @@ from opentracing.ext import tags
 from opentracing.propagation import Format
 import pymongo
 from flask_pymongo import PyMongo
-
+from prometheus_flask_exporter import PrometheusMetrics
 
 def init_tracer(service):
     logging.getLogger('').handlers = []
@@ -27,6 +27,10 @@ def init_tracer(service):
 tracer = init_tracer('backend')
 
 app = Flask(__name__)
+
+metrics = PrometheusMetrics(app)
+# static information as metric
+metrics.info("app_info", "Application info", version="1.0.3")
 
 app.config["MONGO_DBNAME"] = "example-mongodb"
 app.config[

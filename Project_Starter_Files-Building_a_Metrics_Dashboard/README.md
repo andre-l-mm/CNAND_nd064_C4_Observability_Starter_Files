@@ -73,29 +73,54 @@ _Number of error HTTP responses per second divided by the total number of HTTP c
 ## Jaeger in Dashboards
 *TODO:* Now that the trace is running, let's add the metric to our current Grafana dashboard. Once this is completed, provide a screenshot of it here.
 
+![Jaeger Trace on Grafana](answer-img/10-jaeger-trace-on-grafana.png)
+
 ## Report Error
 *TODO:* Using the template below, write a trouble ticket for the developers, to explain the errors that you are seeing (400, 500, latency) and to let them know the file that is causing the issue also include a screenshot of the tracer span to demonstrate how we can user a tracer to locate errors easily.
 
 TROUBLE TICKET
 
-Name:
+Name: Error on /star endpoint
 
-Date:
+Date: 27/12/2021 1:58PM
 
-Subject:
+Subject: /star enpoint takes over 30s to finish 
 
-Affected Area:
+Affected Area: /star backend api
 
-Severity:
+Severity: High
 
-Description:
+Description: Post to /star endpoint with payload below take more than 30s to respond and produces error: 
+
+{
+    "name": "North Star",
+    "distance": 1000
+}
+
+![Error Details on Grafana](answer-img/11-jaeger-star-endpoint-error.png)
 
 
 ## Creating SLIs and SLOs
 *TODO:* We want to create an SLO guaranteeing that our application has a 99.95% uptime per month. Name four SLIs that you would use to measure the success of this SLO.
 
+_Percentage of time for which containers were up and running_
+
+_Number of 400x errors over time_
+
+_Number of 500x errors over time_
+
+_Percentage of Errors compared to total number of requests (i.e. Failure Rate)_
+
 ## Building KPIs for our plan
 *TODO*: Now that we have our SLIs and SLOs, create a list of 2-3 KPIs to accurately measure these metrics as well as a description of why those KPIs were chosen. We will make a dashboard for this, but first write them down here.
 
+_Failure Rate should be less than 0.05%_
+
+_Container uptime should be at least 99.95% for all applications (frontend and backend)_
+
+_No 400x or 500x errors detected_
+
 ## Final Dashboard
 *TODO*: Create a Dashboard containing graphs that capture all the metrics of your KPIs and adequately representing your SLIs and SLOs. Include a screenshot of the dashboard here, and write a text description of what graphs are represented in the dashboard.  
+
+![Final Dashboard](answer-img/12_final_dashboard.png)
