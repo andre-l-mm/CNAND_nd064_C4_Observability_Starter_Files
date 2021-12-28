@@ -23,9 +23,9 @@
 
 **Answer:**
 
-_The application uptime for last month achieved 99.99%_
+_The application will be operational and responding successfully to requests 99.99% of the time in a given month_
 
-_The maximum API response time for the last month was 200ms_  
+_Average API response latency is less than 200ms_  
 
 ## Creating SLI metrics.
 *TODO:* It is important to know why we want to measure certain metrics for our customer. Describe in detail 5 metrics to measure these SLIs. 
@@ -42,9 +42,11 @@ _Maximum HTTP Response Time grouped per time interval (e.g. per 30s)_
 
 _Number of success HTTP responses per second_
 
-_Number of error HTTP responses per second_
+_Number of 500x error HTTP responses per second_
 
-_Number of error HTTP responses per second divided by the total number of HTTP calls per second_  
+_Number of 400x error HTTP responses per second_
+
+_Number of error HTTP responses per second divided by the total number of HTTP calls per second (Failure Rate)_  
 
 
 ## Create a Dashboard to measure our SLIs
@@ -120,11 +122,13 @@ _Percentage of Errors compared to total number of requests (i.e. Failure Rate)_
 
 _Failure Rate should be less than 0.05%_
 
-_Container uptime should be at least 99.95% for all applications (frontend and backend)_
+_Container should be up and running at least 99.95% of the time for all applications (frontend and backend)_
 
 _No 400x or 500x errors detected_
 
 ## Final Dashboard
 *TODO*: Create a Dashboard containing graphs that capture all the metrics of your KPIs and adequately representing your SLIs and SLOs. Include a screenshot of the dashboard here, and write a text description of what graphs are represented in the dashboard.  
 
-![Final Dashboard](answer-img/12_final_dashboard.png)
+![Final Dashboard Part 1](answer-img/12_final_dashboard-part-1.png)
+
+![Final Dashboard Part 2](answer-img/12_final_dashboard-part-2.png)
