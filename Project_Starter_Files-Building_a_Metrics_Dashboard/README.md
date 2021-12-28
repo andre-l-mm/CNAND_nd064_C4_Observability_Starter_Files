@@ -103,6 +103,8 @@ Description: Post to /star endpoint with payload below take more than 30s to res
 ## Creating SLIs and SLOs
 *TODO:* We want to create an SLO guaranteeing that our application has a 99.95% uptime per month. Name four SLIs that you would use to measure the success of this SLO.
 
+**Answer**
+
 _Percentage of time for which containers were up and running_
 
 _Number of 400x errors over time_
@@ -113,6 +115,8 @@ _Percentage of Errors compared to total number of requests (i.e. Failure Rate)_
 
 ## Building KPIs for our plan
 *TODO*: Now that we have our SLIs and SLOs, create a list of 2-3 KPIs to accurately measure these metrics as well as a description of why those KPIs were chosen. We will make a dashboard for this, but first write them down here.
+
+**Answer**
 
 _Failure Rate should be less than 0.05%_
 
