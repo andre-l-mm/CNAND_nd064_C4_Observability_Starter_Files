@@ -120,11 +120,11 @@ _Percentage of Errors compared to total number of requests (i.e. Failure Rate)_
 
 **Answer**
 
-_KPI_1: Failure Rate should be less than 0.05%_
+_KPI_1: Failure Rate should be less than 0.05%. **Justification:** Errors are a good indicator the service may not be performing as expected. An error rate above a certain threshold will be a strong indication the uptime SLO is not being achieved._
 
-_KPI_2: Container should be up and running at least 99.95% of the time for all applications (frontend and backend)_
+_KPI_2: Container should be up and running at least 99.95% of the time for all applications (frontend and backend). **Justification:** With containers down the application will not be able to serve requests. Measuring the uptime of application containers would be essential to determine if SLO is being achieved._
 
-_KPI_3: No 400x or 500x errors detected_
+_KPI_3: No 500x errors detected. **Justification:** 500 errors are always a sign the service was not operational at that point in time._
 
 ## Final Dashboard
 *TODO*: Create a Dashboard containing graphs that capture all the metrics of your KPIs and adequately representing your SLIs and SLOs. Include a screenshot of the dashboard here, and write a text description of what graphs are represented in the dashboard.
